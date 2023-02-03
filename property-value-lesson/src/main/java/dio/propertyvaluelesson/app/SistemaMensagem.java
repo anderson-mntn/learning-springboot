@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class SistemaMensagem implements CommandLineRunner{
     //Obtendo de forma interativa com meu container:
     //Iremos em resources > application.properties e colocaremos as informações lá.
-    @Value("${name}")
+    @Value("${name:Default-Name-Value}") //Se estiver errado/não existir name retorna o conteudo após os 2 pontos.
     private String name;
     @Value("${email}") 
     private String email;
@@ -20,7 +20,6 @@ public class SistemaMensagem implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-
         System.out.println("SistemaMensagem [name=" + name + 
         ", email=" + email +
          ", phone=" + phone + "]");
