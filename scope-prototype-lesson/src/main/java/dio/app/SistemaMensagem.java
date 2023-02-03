@@ -12,7 +12,7 @@ public class SistemaMensagem {
 
     public void enviarConfirmacaoCadastro(){
         System.out.println(noreply);
-        System.out.println("Seus cadastro foi aprovado!");
+        System.out.println("Seu cadastro foi aprovado!");
     }
     public void enviarMensagemBoasVindas(){
         techTeam.setEmail("tech@dio.com.br");
